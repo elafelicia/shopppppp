@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Welcome</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="logo">💖 MyCuteShop</div>
+
+    <nav>
+        <ul>
+		<li id="cart">Cart: 0</li>
+
+            
+            <li>Home
+                <ul class="submenu">
+                    <li><a href="index.html">Main Home</a></li>
+                    <li><a href="index.html">Welcome</a></li>
+                </ul>
+            </li>
+
+            
+            <li>Shop
+                <ul class="submenu">
+                    <li><a href="shop1.html">All Products</a></li>
+                    <li><a href="shop2.html">Best Seller</a></li>
+                </ul>
+            </li>
+
+            
+            <li>Promo
+                <ul class="submenu">
+                    <li><a href="promo1.html">Discount</a></li>
+                    <li><a href="promo2.html">Bundle</a></li>
+                </ul>
+            </li>
+
+            
+            <li>About
+                <ul class="submenu">
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="about2.html">Mission</a></li>
+                </ul>
+            </li>
+
+            
+            <li>Contact
+                <ul class="submenu">
+                    <li><a href="contact1.html">Contact Us</a></li>
+                    <li><a href="contact2.html">Help Center</a></li>
+                </ul>
+            </li>
+
+            
+            <li>Account
+                <ul class="submenu">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<div class="container">
+<h1 id="welcome"></h1>
+
+<p>Welcome to your account page 💖</p>
+</div>
+
+<script>
+let user = localStorage.getItem("user");
+document.getElementById("welcome").innerText = "Hello, " + user + " 🐰";
+</script>
+<script src="script.js"></script>
+</body>
+</html>

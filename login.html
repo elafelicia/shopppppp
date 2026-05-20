@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="head">
+    <img src="hea.jpg" alt="Image" height="250" width="1230">
+  </div>
+
+    <nav>
+        <ul>
+		<li id="cart">Cart: 0</li>
+
+            <li>Home
+                <ul class="submenu">
+                    <li><a href="index.html">Main Home</a></li>
+                    <li><a href="index.html">Welcome</a></li>
+                </ul>
+            </li>
+
+            <li>Menu 1
+			
+                <ul class="submenu">
+                    <li><a href="shop1.html">All Products</a></li>
+                    <li><a href="shop2.html">Best Seller</a></li>
+                </ul>
+            </li>
+
+            <li>Menu2
+                <ul class="submenu">
+                    <li><a href="promo1.html">Discount</a></li>
+                    <li><a href="promo2.html">Bundle</a></li>
+                </ul>
+            </li>
+
+            <li>Menu3
+                <ul class="submenu">
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="about2.html">Mission</a></li>
+                </ul>
+            </li>
+
+       
+            <li>Menu4
+                <ul class="submenu">
+                    <li><a href="contact1.html">Contact Us</a></li>
+                    <li><a href="contact2.html">Help Center</a></li>
+                </ul>
+            </li>
+
+            
+            <li>Account
+                <ul class="submenu">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<div class="form-box">
+<h2>Login 💕</h2>
+
+<form onsubmit="login(event)">
+<input type="text" id="name" placeholder="Name" required>
+<input type="password" id="pass" placeholder="Password" required>
+
+<button type="submit">Login</button>
+</form>
+</div>
+<script src="script.js"></script>
+<script>
+function login(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let pass = document.getElementById("pass").value;
+
+    let savedUser = localStorage.getItem("user");
+    let savedPass = localStorage.getItem("pass");
+
+    if(name === savedUser && pass === savedPass){
+        alert("Login success 💖");
+        window.location.href = "diffclass.html";
+    } else {
+        alert("Wrong username or password ❌");
+    }
+}
+</script>
+
+</body>
+</html>
